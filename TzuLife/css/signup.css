@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #D28A4D;
+    color: #000;
+}
+
+.paws {
+    position: absolute;
+    top: 380px;
+    height: 300px;
+    opacity: 0.5;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8C5D36;
+    padding: 10px 20px;
+    height: 75px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.logo h1 {
+    font-family: 'Segoe UI';
+    font-size: 50px;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Segoe UI';
+}
+
+nav a.active {
+    color: black;
+    /* Change text color to black when active */
+}
+
+.container {
+    width: 500px;
+    max-width: 500px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px 60px;
+    border-radius: 5px;
+    box-shadow: 7px 9px 11px 8px #8b5a2b;
+}
+
+.container h2 {
+    text-align: center;
+}
+
+.fur-parent-div h2 {
+    text-align: left;
+    margin: 5px;
+}
+
+.pet-div h2 {
+    text-align: left;
+    margin: 5px;
+}
+
+.fur-parent-div label {
+    color: red;
+}
+
+.fur-parent-div input {
+    width: 95%;
+    margin: 4px 0;
+}
+
+.fur-parent-div #short-input {
+    width: 45%;
+    margin-right: 3px;
+}
+
+.pet-div label {
+    color: red;
+}
+
+.pet-div input {
+    width: 95%;
+    margin: 4px 0;
+}
+
+.pet-div #short-input {
+    width: 45%;
+    margin-right: 3px;
+}
+
+.pet-div input[type="date"] {
+    width: 45% !important;
+}
+
+#select {
+    width: 46.5%;
+}
+
+select:required:invalid {
+    color: gray;
+}
+
+option[value=""][disabled] {
+    display: none;
+}
+
+option {
+    color: black;
+}
+
+p {
+    color: red;
+    font-size: 9px;
+    text-align: center;
+}
+
+.checkbox-div {
+    text-align: center;
+    font-size: 12px;
+}
+
+.checkbox-div a {
+    color: #3871cd;
+}
+
+.checkbox-div button {
+    background: #D28A4D;
+    margin: 20px 0 0 0;
+    padding: 5px 30px;
+    border-radius: 50px;
+    border: none;
+}
+
+.checkbox-div p {
+    color: black;
+    font-size: 10px;
+}

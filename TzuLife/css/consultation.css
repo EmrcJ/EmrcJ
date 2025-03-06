@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #8b5a2b; /* amber-700 */
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-container {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #d97706; /* amber-600 */
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.brand-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    padding: 16px;
+    flex: 1;
+}
+
+.nav-links ul {
+    list-style: none;
+}
+
+.nav-links li {
+    margin-bottom: 24px;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Active link style */
+.nav-links a.active {
+    color: #fef3c7; /* amber-100 */
+    font-weight: bold;
+}
+
+.nav-links i {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff; /* amber-100 */
+}
+
+.header {
+    background-color: #dd9847; /* amber-200 */
+    padding: 16px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-info {
+    text-align: right;
+    margin-right: 8px;
+}
+
+.user-name {
+    font-weight: 500;
+    color: #78350f; /* amber-900 */
+}
+
+/* Consultation Styles */
+.consultation-container {
+    flex: 1;
+    padding: 0;
+    overflow-y: auto;
+}
+
+.consultation-header {
+    background-color: #dd9847;
+    padding: 10px 20px;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.consultation-content {
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #dd9847;
+    margin: 0;
+    height: calc(100% - 50px);
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+select, input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dd9847;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.history-button {
+    background-color: #dd9847;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    float: right;
+}
+
+.health-condition {
+    margin-top: 30px;
+}
+
+.health-condition h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.symptoms-textarea {
+    width: 100%;
+    height: 200px;
+    padding: 15px;
+    border: 1px solid #dd9847;
+    border-radius: 4px;
+    resize: none;
+    margin-bottom: 20px;
+}
+
+.placeholder-text {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+    font-style: italic;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.save-button {
+    background-color: #ffd966;
+    color: black;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.edit-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.generate-button {
+    background-color: #00cc66;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}

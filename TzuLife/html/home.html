@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TzuLife</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Arsenica:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/home.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'TT Commons', sans-serif;
+            background-color: #dd9847;
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #8b5a2b;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .logo span {
+            color: #d8b8a1;
+            font-size: 50px;
+            font-weight: bold;
+            font-family: 'Arsenica', sans-serif;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'TT Commons', sans-serif;
+            font-weight: bold;
+            font-size: 0.9em;
+            padding: 5px 10px;
+            transition: background-color 0.3s;
+        }
+
+        nav a.active {
+            color: black;
+            background-color: transparent;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 80px 20px 20px;
+            height: calc(100vh - 80px);
+            max-height: 800px;
+        }
+
+        .hero-text {
+            max-width: 50%;
+            margin-right: 20px;
+            text-align: left;
+        }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 50px;
+            font-weight: 900;
+            color: black;
+        }
+
+        .hero-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 50px;
+            font-weight: 900;
+            color: black;
+        }
+
+        .hero-text p {
+            font-family: 'Arsenica', sans-serif;
+            font-size: 20px;
+            margin: 10px 0;
+            font-weight: 400;
+            color: #f1dac9;
+        }
+
+        .hero-text button {
+            display: inline-block;
+            background-color: #8b5a2b;
+            color: #f1dac9;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Arsenica', sans-serif;
+            font-size: 20px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .hero-text button:hover {
+            background-color: #7a4823;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: right;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 75%;
+            height: auto;
+            max-height: 90%;
+            object-fit: cover;
+        }
+
+        .paws {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/TzuLife-logo.png" alt="TzuLife Logo">
+            <span>TZULIFE</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a class="active" href="home.html">HOME</a></li>
+                <li><a href="consultations.html">CONSULTATIONS</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="aboutus.html">ABOUT US</a></li>
+                <li><a href="login.html">LOG IN</a></li>
+                <li><a href="signup.html">SIGN UP</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-text">
+            <h2>WELCOME TO</h2>
+            <h1>TzuLife</h1>
+            <p>"Empowering Shih Tzu Owners with Expert Health Insights and Tailored Nutrition Plans"</p>
+            <button>TRY OUR ONLINE CONSULTATION NOW</button>
+        </div>
+        <div class="hero-image">
+            <img src="../images/white.png" alt="Shih Tzu Dog">
+        </div>
+    </section>
+    <img src="../images/Paws.png" alt="paws-image" class="paws">
+
+    <script>
+        const navLinks = document.querySelectorAll('nav a');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

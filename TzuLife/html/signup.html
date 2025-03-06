@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - TzuLife</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Arsenica:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/signup.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'TT Commons', sans-serif;
+            background-color: #dd9847;
+            color: #fff;
+        }
+
+        header {
+            background-color: #8b5a2b;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .logo span {
+            color: #d8b8a1;
+            font-size: 50px;
+            font-weight: bold;
+            font-family: 'Arsenica', sans-serif;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'TT Commons', sans-serif;
+            font-weight: bold;
+            font-size: 0.9em;
+            padding: 5px 10px;
+            transition: background-color 0.3s;
+        }
+
+        nav a.active {
+            color: black;
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/TzuLife-logo.png" alt="TzuLife Logo">
+            <span>TZULIFE</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="consultations.html">CONSULTATIONS</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="aboutus.html">ABOUT US</a></li>
+                <li><a href="login.html">LOG IN</a></li>
+                <li><a class="active" href="signup.html">SIGN UP</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Sign Up Form</h2>
+        <div class="fur-parent-div">
+            <h2>Fur Parent</h2>
+            <label>*</label>
+            <input placeholder="Last Name" required>
+            <label>*</label>
+            <input placeholder="First Name" required id="short-input">
+            <label>*</label>
+            <input placeholder="Middle Name" required id="short-input">
+            <label>*</label>
+            <input placeholder="Address" required>
+            <label>*</label>
+            <input placeholder="Contact Number" type="number" required id="short-input">
+            <label>*</label>
+            <input placeholder="Email Address" type="email" required id="short-input">
+        </div>
+        <div class="pet-div">
+            <h2>Pet</h2>
+            <label>*</label>
+            <input placeholder="Name" required>
+            <label>*</label>
+            <input placeholder="Birth Date" type="text" required id="short-input" onfocus="(this.type='date')" onblur="(this.type='text')" id="date">
+            <label>*</label>
+            <select required id="select">
+                <option value="">Color</option>
+                <option value="white">White</option>
+                <option value="brown">Brown</option>
+                <option value="black">Black</option>
+            </select>
+            <label>*</label>
+            <input placeholder="Age" type="number" required id="short-input">
+            <label>*</label>
+            <input placeholder="Weight" type="number" required id="short-input">
+            <label>*</label>
+            <input placeholder="Password" required type="password">
+            <label>*</label>
+            <input placeholder="Password" required type="password">
+        </div>
+        <p>Password must contain at least 8 Character | 1 Number | 1 Uppercase Letter | 1 Lowercase Letter | 1 Special Character</p>
+        <div class="checkbox-div">
+            <input type="checkbox">
+            <label>By creating an account, you agree to the <a href="">Terms of use</a> and <a href="">Privacy Policy</a></label>
+            <br>
+            <button>Sign Up</button>
+            <p>Already a member? <a href="login.html">Login</a> here</p>
+        </div>
+    </div>
+    <script>
+        const navLinks = document.querySelectorAll('nav a');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

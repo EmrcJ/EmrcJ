@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TzuLife Consultation</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/consultation.css">
+</head>
+<body>
+    <!-- Left Sidebar -->
+    <div class="sidebar">
+        <!-- Logo -->
+        <div class="logo-container">
+            <div class="logo">
+                <img src="TzuLife-logo.png" alt="TzuLife Logo">
+            </div>
+            <h1 class="brand-name">TZULIFE</h1>
+        </div>
+        
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+            <ul>
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="consultation.html" class="active">
+                        <i class="fas fa-stethoscope"></i>
+                        <span>Consultation</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="myshih.html">
+                        <i class="fas fa-dog"></i>
+                        <span>My Shih Tzu</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="dogfood.html">
+                        <i class="fas fa-utensils"></i>
+                        <span>Recommended<br>Dog food</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="history.html">
+                        <i class="fas fa-history"></i>
+                        <span>Track History</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header with User Profile -->
+        <header class="header">
+            <div class="user-profile">
+                <div class="user-info">
+                    <div class="user-name">User Profile</div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Consultation Content -->
+        <div class="consultation-container">
+            <div class="consultation-header">
+                CONSULTATION
+            </div>
+            <div class="consultation-content">
+                <div class="form-row">
+                    <div class="form-group">
+                        <select id="pet-select">
+                            <option value="" disabled selected>Select Pet</option>
+                            <option value="pet1">pet1</option>
+                            <option value="pet2">pet2</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="flex: 0 0 auto;">
+                        <button class="history-button">History</button>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" placeholder="Age">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Weight">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Last meal intake">
+                    </div>
+                </div>
+                
+                <div class="health-condition">
+                    <h2>Enter your Shih Tzu health condition</h2>
+                    <textarea class="symptoms-textarea" placeholder="Input the dog's symptoms, last meal time, last medicine (if any was taken), and any changes in symptoms (improved or worsened?)."></textarea>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="save-button">SAVE</button>
+                    <button class="edit-button">EDIT</button>
+                    <button class="generate-button">GENERATE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

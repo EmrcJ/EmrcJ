@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - TzuLife</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Arsenica:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/aboutus.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'TT Commons', sans-serif;
+            background-color: #dd9847;
+            color: #fff;
+        }
+
+        header {
+            background-color: #8b5a2b;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .logo span {
+            color: #d8b8a1;
+            font-size: 50px;
+            font-weight: bold;
+            font-family: 'Arsenica', sans-serif;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'TT Commons', sans-serif;
+            font-weight: bold;
+            font-size: 0.9em;
+            padding: 5px 10px;
+            transition: background-color 0.3s;
+        }
+
+        nav a.active {
+            color: black;
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/TzuLife-logo.png" alt="TzuLife Logo">
+            <span>TZULIFE</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="consultations.html">CONSULTATIONS</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a class="active" href="aboutus.html">ABOUT US</a></li>
+                <li><a href="login.html">LOG IN</a></li>
+                <li><a href="signup.html">SIGN UP</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="about-section">
+            <div class="about-image">
+                <img src="../images/AboutUs.png" alt="About Us">
+            </div>
+            <div class="about-text">
+                <p>At TZULIFE, we are passionate about improving the health and quality of life of Shih Tzus through technology-driven solutions. Understanding the unique health needs of this beloved breed, we have developed a web-based platform that integrates machine learning, data science, and pet health expertise to provide real-time health classification and personalized dog food recommendations.</p>
+                
+                <h2>Our Mission</h2>
+                <p>Our mission is to empower Shih Tzu owners with accurate, data-driven insights that help them make informed decisions about their pet's health and nutrition. We believe that early detection of health issues and proper diet planning can significantly improve a dog's longevity, vitality, and overall well-being.</p>
+
+                <h2>What We Do</h2>
+                <p>TZULIFE utilizes advanced Artificial Intelligence (AI) models, specifically:</p>
+                <ul>
+                    <li>✔ Extreme Gradient Boosting (XGBoost) – A powerful machine learning algorithm that classifies your Shih Tzu's current health status based on key symptoms and health indicators.</li>
+                    <li>✔ Shapley Additive Explanations (SHAP) – A cutting-edge explainability tool that provides transparent insights into how different factors contribute to your pet's health condition and food recommendations.</li>
+                </ul>
+
+                <div class="more-info">
+                    <button class="more-info-button" onclick="toggleMoreInfo()">Want to know more? &#8595;</button>
+                    <div class="hidden-info" id="moreInfo">
+                        <p>Through our platform, users can:</p>
+                        <ul>
+                            <li>✅ Input health symptoms and vital information about their Shih Tzu.</li>
+                            <li>✅ Receive a real-time classification of their pet's current health status.</li>
+                            <li>✅ Get science-backed dog food recommendations tailored to their pet's needs.</li>
+                            <li>✅ Access an intuitive, user-friendly interface that simplifies pet health management.</li>
+                        </ul>
+                        <h2>Why TZULIFE?</h2>
+                        <ul>
+                            <li>💡 Technology-Driven: We combine AI, machine learning, and expert insights to deliver precise health evaluations and dietary advice.</li>
+                            <li>🐶 Breed-Specific Focus: Shih Tzus have unique health and dietary needs, and TZULIFE is customized to address them.</li>
+                            <li>🔍 Transparent & Explainable AI: With SHAP, pet owners can understand the reasoning behind health classifications and recommendations.</li>
+                            <li>❤️ Pet-Centered Approach: We prioritize Shih Tzu health and happiness, ensuring that owners have the right tools to care for their furry companions effectively.</li>
+                        </ul>
+                        <h2>Join Us in Revolutionizing Shih Tzu Care!</h2>
+                        <p>At TZULIFE, we believe that every Shih Tzu deserves the best care possible. Whether you're a new pet owner or an experienced caregiver, our platform provides valuable insights that help keep your pup healthy and thriving.</p>
+                        <p>🐾 Your Shih Tzu's health is our priority. 🐾</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        const navLinks = document.querySelectorAll('nav a');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        function toggleMoreInfo() {
+            const moreInfo = document.getElementById('moreInfo');
+            if (moreInfo.style.display === "none" || moreInfo.style.display === "") {
+                moreInfo.style.display = "block";
+            } else {
+                moreInfo.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
